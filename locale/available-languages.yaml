@@ -1,0 +1,8 @@
+english:
+  native-name: English
+  english-name: English
+  language-code: en
+welsh:
+  native-name: Cymraeg
+  english-name: Welsh
+  language-code: cy

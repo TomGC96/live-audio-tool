@@ -1,0 +1,22 @@
+Clipper - Help
+
+The Clipper can work together with, or independently of the built in recorder.
+
+To use the clipper with the recorder, check the "Use Recorder" box. This will automatically use the recorder's audio file to produce clips. You must start the recorder before you can use the clipper.
+
+OPTIONAL: If you want to use an external recorder, it must export the audio directly to a file. This file can be any format, however WAV will work best if you want accurate start and end times. Once you have started the external recorder, you must select the recording file before you can use the clipper.
+
+You should choose where you want to store all clips as they are exported. These are your "Output files". Enter the file name that will be stored. Here you can use the following format directives to format your file name, which will be replaced with the current date and time when the clip is stored. If you choose a file name which will be the same every time, the previous file will be overwritten when the clip is stored.
+
+Day - %d
+Month - %m
+Year - %Y
+Hour - %H
+Minute - %M
+Second - %S
+
+The pre buffer is the length of time (in seconds) before a clip is started, that will be included in the clip. This can be any value between 0 and 99 seconds. This avoids losing any desired part of a clip which has happened before the clip was started.
+
+The post buffer is the length of time (in seconds) after a clip is stopped, that will be included in the clip. This can be any value between 0 and 99 seconds. This avoids losing any desired part of a clip which has happened after the clip was ended.
+
+All settings are automatically saved as changes are made. You can revert to the default settings at any point.

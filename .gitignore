@@ -1,0 +1,36 @@
+# Python Files
+__pycache__/
+*.pyc
+*.log
+*.py[cod]
+*$py.class
+
+# VirtualEnv
+env/
+
+# Vim Swap Files
+*.swp
+
+# JetBrains
+.idea
+*.iml
+
+# Live Audio Tool Files
+config_clipper.json
+config_recorder.json
+config_lat.json
+
+# Audio Files
+*.wav
+*.mp3
+*.flac
+*.ogg
+*.mp4
+
+# Compiled Translation Files
+*.mo
+*.pot
+
+# MacOS
+.DS_Store
+

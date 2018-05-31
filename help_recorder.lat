@@ -1,0 +1,16 @@
+Recorder - Help
+
+The Recorder can be used alone to record for long periods of time, as well as being used with the Clipper. This recorder exports audio directly to a WAV file only.
+
+You should choose where you want to store all recordings. This is your "Recording Filename". Enter the file name that will be stored. Here you can use the following format directives to format your file name, which will be replaced with the current date and time when the recording is started. If you choose a file name which will be the same every time and the file already exists, you must change the filename before you are able to start a new recording.
+
+Day - %d
+Month - %m
+Year - %Y
+Hour - %H
+Minute - %M
+Second - %S
+
+Any recording device available on your system can be selected from the drop down menu. You cannot change recording device while recording.
+
+All settings are automatically saved as changes are made. You can revert to the default settings at any point.
