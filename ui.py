@@ -69,8 +69,12 @@ class UI(base, form):
         self.RecHelpButton.clicked.connect(self.rec_help_click)
 
         # Load recording devices to combo box
+        device_index = 0
         for device in recr.get_recording_devices():
-            self.RecDeviceCombo.addItem(device['name'])
+            if device['max_input_channels'] > 0:
+                self.RecDeviceCombo.addItem(device['name'], device_index)
+            # Increment actual device index
+            device_index += 1
 
         # Read help text from file
         try:
@@ -137,7 +141,7 @@ class UI(base, form):
             self.rec_update_ui(recr)
 
     def rec_change_device_combo(self, recr):
-        recr.device = self.RecDeviceCombo.currentIndex()
+        recr.device = self.RecDeviceCombo.currentData()
         recr.write_config()
 
     def rec_set_default_click(self, recr):
@@ -165,7 +169,7 @@ class UI(base, form):
 
     def rec_update_ui(self, recr):
         self.RecOutputFileLab.setText(recr.out_filename_template)
-        self.RecDeviceCombo.setCurrentIndex(recr.device)
+        self.RecDeviceCombo.setCurrentIndex(self.RecDeviceCombo.findData(recr.device))
         self.rec_set_status(recr.status)
         recr.update_status()
 
