@@ -350,7 +350,7 @@ class UI(base, form):
 
         try:
             langs_file = open(AVAILABLE_LANGUAGE_FILE, "r")
-            self.available_languages = yaml.load(langs_file)
+            self.available_languages = yaml.safe_load(langs_file)
         except FileNotFoundError:
             print(_("`Available Languages` file not found"))
             self.available_languages = {'english': {'native-name': 'English',
